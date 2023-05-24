@@ -14,6 +14,19 @@
     <title>Yummy</title>
 </head>
 <body>
+
+
+  <!-- Up -->
+
+
+  <div class="up position-fixed shadow">
+    <i class="bi bi-arrow-up-short text-white fs-4"></i>
+  </div>
+
+
+  <!-- Header -->
+
+  
     <header class="fixed-top d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between">
           <a class="text-decoration-none" href="yummy.html">
@@ -56,9 +69,14 @@
               </div>
             </div>
           </nav>
-          <a class="button-book text-decoration-none rounded-pill" href="#book-a-table">Book a Table</a>
+          <a class="button-book text-decoration-none rounded-pill shadow" href="#book-a-table">Book a Table</a>
         </div>
     </header>
+
+
+    <!-- Banner -->
+
+
     <section id="home" class="banner d-flex align-items-center bg-body-secondary">
       <div class="container">
         <div class="row justify-content-between gy-5">
@@ -66,7 +84,7 @@
             <h2 class="fw-bold">Enjoy Your Healthy<br>Delicious Food</h2>
             <p class="fw-medium">Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
             <div class="d-flex align-items-center column-gap-4">
-              <a href="#" class="button-book text-decoration-none rounded-pill">Book a Table</a>
+              <a href="#" class="button-book text-decoration-none rounded-pill shadow">Book a Table</a>
               <a href="https://www.youtube.com/watch?v=lOIZmoOhJik" target="_blank" class="d-flex align-items-center text-decoration-none column-gap-1"><i class="bi bi-play-circle fs-3"></i><span class="fw-semibold">Watch Video</span></a>
             </div>
           </div>
@@ -77,7 +95,10 @@
       </div>
     </section>
     <main>
+
+
       <!-- About -->
+      
 
       <section id="about" class="about">
         <div class="container">
@@ -107,9 +128,9 @@
                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
                 </p>
-                <div class="position-relative mt-4">
-                  <img src="./assets/images/about-2.jpg" class="img-fluid" alt="">
-                  <a href="https://www.youtube.com/watch?v=lOIZmoOhJik"></a>
+                <div class="position-relative mt-4 about-pic d-flex align-items-center justify-content-center">
+                  <img src="./assets/images/about-2.jpg" class="img-fluid" alt="waffle">
+                  <a class="position-absolute" href="https://www.youtube.com/watch?v=lOIZmoOhJik" target="_blank"><i class="bi bi-play shadow"></i></a>
                 </div>
               </div>
             </div>
@@ -119,6 +140,8 @@
 
 
       <!-- Why Choose Yummy? -->
+
+
       <section class="choose-yummy bg-body-secondary">
         <div class="container d-flex justify-content-center align-items-center">
           <div class="row">
@@ -199,9 +222,7 @@
       </section>
 
 
-
       <!-- Menu -->
-
 
 
       <section id="menu" class="menu">
@@ -262,9 +283,7 @@
       </section>
 
 
-
       <!-- TESTIMONIALS -->
-
 
 
       <section class="testimonials bg-body-secondary">
@@ -370,9 +389,7 @@
         </div>
       </section>
 
-
       <!-- Events -->
-
 
 
       <section id="events" class="events">
@@ -485,9 +502,7 @@
       </section>
 
 
-
       <!-- BOOK A TABLE -->
-
 
     
       <section id="book-a-table" class="book-a-table">
@@ -549,7 +564,7 @@
                   <div class="validate"></div>
                 </div>
                 <div class="text-center mt-3">
-                  <button class="rounded-pill" type="submit">Book a Table</button>
+                  <button class="rounded-pill shadow" type="submit">Book a Table</button>
                 </div>
               </form>
             </div>
@@ -558,9 +573,7 @@
       </section>
 
 
-
       <!-- Gallery -->
-
 
 
       <section id="gallery" class="gallery bg-body-secondary">
@@ -615,9 +628,7 @@
       </section>
 
 
-
       <!-- Contact -->
-
 
 
       <section id="contact" class="contact">
@@ -699,7 +710,7 @@
               rows="5" 
               placeholder="Message"></textarea>
             </div>
-            <div class="text-center"><button class="rounded-pill" type="submit">Send Message</button></div>
+            <div class="text-center"><button class="rounded-pill shadow" type="submit">Send Message</button></div>
           </form>
         </div>
       </section>
@@ -756,5 +767,30 @@
         </div>
       </div>
     </footer>
+
+
+    <!-- up -->
+
+
+    <script>
+      let up = document.querySelector(".up");
+
+      window.addEventListener("scroll", () => {
+        let scrollY = window.scrollY;
+        if(scrollY > 300){
+          up.classList.add("show");
+        }
+        else{
+          up.classList.remove("show");
+        }
+
+      });
+      up.addEventListener("click", () =>{
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    </script>
 </body>
 </html>
